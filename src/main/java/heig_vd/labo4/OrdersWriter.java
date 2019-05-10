@@ -77,7 +77,7 @@ public class OrdersWriter {
     }
 
     private String getColorFor(Product product) {
-        switch (product.getColor()) {
+        switch (product.getColor().colorToInt()) {
             case 1:
                 return "blue";
             case 2:
