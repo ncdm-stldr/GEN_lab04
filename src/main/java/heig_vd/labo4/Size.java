@@ -2,6 +2,8 @@ package heig_vd.labo4;
 
 public class Size {
 
+    public static final int SIZE_NOT_APPLICABLE = -1;
+
     int size;
 
     public Size(int size){
