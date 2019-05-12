@@ -8,10 +8,10 @@ public class    Product {
     private double price;
     private String currency;
 
-    public Product(String code, Color color, int size, double price, String currency) {
+    public Product(String code, Color color, Size size, double price, String currency) {
         this.code = code;
         this.color = color;
-        this.size = new Size(size);
+        this.size = size;
         this.price = price;
         this.currency = currency;
     }
@@ -24,8 +24,8 @@ public class    Product {
         return color;
     }
 
-    public int getSize() {
-        return size.sizeToInt();
+    public Size getSize() {
+        return size;
     }
 
     public double getPrice() {

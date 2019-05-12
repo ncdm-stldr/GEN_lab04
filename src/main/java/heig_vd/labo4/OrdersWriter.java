@@ -28,7 +28,7 @@ public class OrdersWriter {
                 sb.append(product.getColor());
                 sb.append("\", ");
 
-                if (product.getSize() != Product.SIZE_NOT_APPLICABLE) {
+                if (product.getSize().sizeToInt() != Product.SIZE_NOT_APPLICABLE) {
                     sb.append("\"size\": \"");
                     sb.append(getSizeFor(product));
                     sb.append("\", ");
@@ -58,7 +58,7 @@ public class OrdersWriter {
     }
 
     private String getSizeFor(Product product) {
-        switch (product.getSize()) {
+        switch (product.getSize().sizeToInt()) {
             case 1:
                 return "XS";
             case 2:
